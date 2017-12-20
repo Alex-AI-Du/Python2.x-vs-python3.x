@@ -1,4 +1,5 @@
 Python3.x和Python2.x的区别
+
 这个星期开始学习Python了，因为看的书都是基于Python2.x，而且我安装的是Python3.1，所以书上写的地方好多都不适用于Python3.1，特意在Google上search了一下3.x和2.x的区别。特此在自己的空间中记录一下，以备以后查找方便，也可以分享给想学习Python的friends.
 
 1.性能 
