@@ -10,7 +10,7 @@ Py3.X源码文件默认使用utf-8编码，这就使得以下代码是合法的�
 >\>>> 中国 = 'china' <br>
 >\>>>print(中国) <br>
 >china <br>
-
+<br>
 3. 语法<br>
 >1）去除了<>，全部改用!=<br>
 >2）去除``，全部改用repr() <br>
@@ -48,37 +48,37 @@ Py3.X源码文件默认使用utf-8编码，这就使得以下代码是合法的�
 >>\>>> oct(438) <br>
 >>\'0o666' <br>
 >11）增加了 2进制字面量和bin()函数 <br>
->    >>> bin(438) <br>
->    '0b110110110' <br>
->    >>> _438 = '0b110110110' <br>
->    >>> _438 <br>
->    '0b110110110' <br>
+>>\>> bin(438) <br>
+>>\'0b110110110' <br>
+>>\>> _438 = '0b110110110' <br>
+>>\>> _438 <br>
+>>\'0b110110110' <br>
 >12）扩展的可迭代解包。在Py3.X 里，a, b, *rest = seq和 *rest, a = seq都是合法的，只要求两点：rest是list对象和seq是可迭代的。 <br>
 >13）新的super()，可以不再给super()传参数， <br>
->>    >>> class C(object): <br>
->>          def __init__(self, a): <br>
->>             print('C', a) <br>
->>    >>> class D(C): <br>
->>          def __init(self, a): <br>
->>             super().__init__(a) # 无参数调用super() <br>
->>    >>> D(8) <br>
->>    C 8 <br>
->>    <__main__.D object at 0x00D7ED90> <br>
+>>\>>> class C(object): <br>
+>>\      def __init__(self, a): <br>
+>>\         print('C', a) <br>
+>>\>>> class D(C): <br>
+>>\      def __init(self, a): <br>
+>>\         super().__init__(a) # 无参数调用super() <br>
+>>\>>> D(8) <br>
+>>\C 8 <br>
+>>\<__main__.D object at 0x00D7ED90> <br>
 >14）新的metaclass语法： <br>
->>    class Foo(*bases, **kwds): <br>
->>      pass <br>
+>>\    class Foo(*bases, **kwds): <br>
+>>\      pass <br>
 >15）支持class decorator。用法与函数decorator一样： <br>
->>    >>> def foo(cls_a): <br>
->>          def print_func(self): <br>
->>             print('Hello, world!') <br>
->>          cls_a.print = print_func <br>
->>          return cls_a <br>
->>    >>> @foo <br>
->>    class C(object): <br>
->>      pass <br>
->>    >>> C().print() <br>
->>    Hello, world! <br>
->>class decorator可以用来玩玩狸猫换太子的大把戏。更多请参阅PEP 3129 <br>
+>>\    >>> def foo(cls_a): <br>
+>>\          def print_func(self): <br>
+>>\             print('Hello, world!') <br>
+>>\          cls_a.print = print_func <br>
+>>\          return cls_a <br>
+>>\    >>> @foo <br>
+>>\    class C(object): <br>
+>>\      pass <br>
+>>\    >>> C().print() <br>
+>>\    Hello, world! <br>
+>>\class decorator可以用来玩玩狸猫换太子的大把戏。更多请参阅PEP 3129 <br>
 <br>
 4. 字符串和字节串 <br>
 >1）现在字符串只有str一种类型，但它跟2.x版本的unicode几乎一样。<br>
