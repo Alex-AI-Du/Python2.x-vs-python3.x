@@ -7,9 +7,9 @@ Py3.0运行 pystone benchmark的速度比Py2.5慢30%。Guido认为Py3.0有极大
 Py3.1性能比Py2.5慢15%，还有很大的提升空间。<br>
 2.编码 <br>
 Py3.X源码文件默认使用utf-8编码，这就使得以下代码是合法的： <br>
-    >>> 中国 = 'china' <br>
-    >>>print(中国) <br>
-    china <br>
+>\>>> 中国 = 'china' <br>
+>\>>>print(中国) <br>
+>china <br>
 3. 语法<br>
 1）去除了<>，全部改用!=<br>
 2）去除``，全部改用repr() <br>
